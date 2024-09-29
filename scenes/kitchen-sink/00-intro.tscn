@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://6s672m2uvsgp"]
+
+[node name="Base" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[center]Welcome on the [b]sxgd kitchen sink[/b]!
+
+It serves as a demo and test suite of all included scripts in [b]sxgd[/b].
+Use the [b]Next[/b] and [b]Prev[/b] buttons to navigate between the demos.
+Use [b]Reset[/b] to reset the current demo.
+
+This kitchen sink is powered by the [b]SxSceneRunner[/b] node,
+which automatically build a \"test suite\" from an input folder."
+fit_content = true

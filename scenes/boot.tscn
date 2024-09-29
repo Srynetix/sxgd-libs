@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj5lv643h4w4s"]
+
+[ext_resource type="Script" path="res://scenes/boot.gd" id="1_t7n2l"]
+
+[node name="Boot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t7n2l")
+show_back_button = false
+scene_folder = "res://scenes/kitchen-sink"

@@ -1,0 +1,148 @@
+[gd_scene load_steps=4 format=3 uid="uid://fjj6c7itsetb"]
+
+[ext_resource type="FontFile" uid="uid://b0uwjlvt0sevu" path="res://addons/sxgd-icon-font/assets/otfs/Font Awesome 6 Free-Solid-900.otf" id="1_77la3"]
+[ext_resource type="Script" path="res://scenes/kitchen-sink/icon-font-label.gd" id="1_d2pvv"]
+[ext_resource type="Script" path="res://addons/sxgd-icon-font/nodes/label.gd" id="2_l1bw4"]
+
+[node name="Root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d2pvv")
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -69.0
+offset_right = 162.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]Icon Font - Labels[/b]
+
+Label samples using Font Awesome.
+Use the last row to customize your icon.
+[/center]"
+fit_content = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0.171875, 0.171875, 0.171875, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/MarginContainer/MarginContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "anchor"
+
+[node name="SxIconFontLabel" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_77la3")
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_l1bw4")
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "arrow-left"
+
+[node name="SxIconFontLabel2" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_77la3")
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_l1bw4")
+icon_name = "arrow-left"
+
+[node name="Label3" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "bomb"
+
+[node name="SxIconFontLabel3" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_77la3")
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_l1bw4")
+icon_name = "bomb"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CustomEdit" type="LineEdit" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "gear"
+
+[node name="CustomColor" type="ColorPickerButton" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
+[node name="CustomSize" type="SpinBox" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 8.0
+value = 24.0
+update_on_text_changed = true
+
+[node name="CustomIcon" type="Label" parent="CenterContainer/MarginContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_77la3")
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_l1bw4")
+icon_name = "gear"

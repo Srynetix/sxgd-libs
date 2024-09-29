@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4s4xmxuphm15"]
+
+[ext_resource type="Script" path="res://scenes/kitchen-sink/verlet-test.gd" id="1_60ivw"]
+[ext_resource type="Script" path="res://addons/sxgd-verlet-physics/nodes/verlet-world.gd" id="1_tqlcy"]
+
+[node name="Root" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_60ivw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][b]Verlet - Verlet tests[/b]
+
+Here you can play with Verlet physics.[/center]"
+fit_content = true
+
+[node name="SxVerletWorld" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_tqlcy")

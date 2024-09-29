@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://vuicrq6qbb61"]
+
+[ext_resource type="Script" path="res://addons/sxgd-ui-nodes/nodes/full-screen-file-dialog.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/kitchen-sink/ui-full-screen-file-dialog.gd" id="2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -55.0
+offset_right = 140.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="RichTextLabel" parent="CenterContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]UI - SxFullScreenFileDialog[/b]
+
+A file selector as a full screen dialog.[/center]"
+fit_content = true
+
+[node name="Button" type="Button" parent="CenterContainer"]
+layout_mode = 2
+text = "Open dialog"
+
+[node name="SxFullScreenFileDialog" type="Panel" parent="."]
+layout_mode = 0
+script = ExtResource("1")
+shortcuts = [{
+"name": "User Data",
+"path": "user://"
+}, {
+"name": "Source",
+"path": "res://"
+}]
+file_filter = "*"
+
+[connection signal="pressed" from="CenterContainer/Button" to="SxFullScreenFileDialog" method="show_dialog"]

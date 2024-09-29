@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="sxgd-libs"
+run/main_scene="res://scenes/boot.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+SxIconFont="*res://addons/sxgd-icon-font/prelude.gd"
+SxVirtualControls="*res://addons/sxgd-virtual-controls/prelude.gd"
+SxCore="*res://addons/sxgd-core/prelude.gd"
+GameData="*res://autoloads/game-data.gd"
+SxCoreNodes="*res://addons/sxgd-core-nodes/prelude.gd"
+SxUiNodes="*res://addons/sxgd-ui-nodes/prelude.gd"
+SxAudioNodes="*res://addons/sxgd-audio-nodes/prelude.gd"
+SxNetworkNodes="*res://addons/sxgd-network-nodes/prelude.gd"
+SxFxNodes="*res://addons/sxgd-fx-nodes/prelude.gd"
+SxDebugNodes="*res://addons/sxgd-debug-nodes/prelude.gd"
+DebugTools="*res://autoloads/debug-tools.gd"
+SxSceneRunner="*res://addons/sxgd-scene-runner/prelude.gd"
+SxVerletPhysics="*res://addons/sxgd-verlet-physics/prelude.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sxgd-audio-nodes/plugin.cfg", "res://addons/sxgd-core-nodes/plugin.cfg", "res://addons/sxgd-core/plugin.cfg", "res://addons/sxgd-debug-nodes/plugin.cfg", "res://addons/sxgd-fx-nodes/plugin.cfg", "res://addons/sxgd-icon-font/plugin.cfg", "res://addons/sxgd-network-nodes/plugin.cfg", "res://addons/sxgd-scene-runner/plugin.cfg", "res://addons/sxgd-ui-nodes/plugin.cfg", "res://addons/sxgd-verlet-physics/plugin.cfg", "res://addons/sxgd-virtual-controls/plugin.cfg")
+
+[engine]
+
+version="4.3.win64"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
